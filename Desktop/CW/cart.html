@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubey's cart</title>
+</head>
+<style>
+    #main {
+        display: grid;
+        grid-auto-rows: 650px;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    #main div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 20px;
+    }
+    #main img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+</style>
+
+<body>
+    <h1>Your Total Prize is</h1>
+    <h1 id="total">0</h1>
+    <div id="main">
+    </div>
+</body>
+<script>
+    const main = document.getElementById("main");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const total = document.getElementById("total");
+    showData(cart);
+
+
+    function showData(data) {
+        main.innerHTML = "";
+        data.forEach((el, i) => {
+            const card = document.createElement("div");
+
+            const image = document.createElement("img");
+            const category = document.createElement("h3");
+            const description = document.createElement("p");
+            const price = document.createElement("h4");
+            const remove = document.createElement("button");
+            const increment = document.createElement("button");
+            const decrement = document.createElement("button");
+            const quantity = document.createElement("span");
+
+            image.setAttribute("src", el.image);
+            description.innerText = el.description;
+            category.innerText = el.category;
+            price.innerText = "₹" + el.price;
+            remove.innerText = "Remove"
+            increment.innerText = "+";
+            decrement.innerText = "-";
+            quantity.innerText = el.quantity;
+
+            remove.addEventListener("click", () => {
+                cart.splice(i, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                showData(cart);
+                sum();
+            })
+
+            increment.addEventListener("click", () => {
+                el.quantity++;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                showData(cart);
+                sum();
+            })
+
+            decrement.addEventListener("click", () => {
+                if (el.quantity > 1) {
+                    el.quantity--;
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                showData(cart);
+                sum();
+            })
+            card.append(image, category, description, price, remove, decrement, quantity, increment);
+            main.append(card);
+        })
+    }
+
+    function sum() {
+        let sum = 0;
+        for (let i = 0; i < cart.length; ++i) {
+            sum += cart[i].quantity * cart[i].price;
+        }
+        total.innerText = sum;
+    }
+    let flag = true;
+    if(flag) {
+        let sum = 0;
+        for (let i = 0; i < cart.length; ++i) {
+            sum += cart[i].quantity * cart[i].price;
+        }
+        total.innerText = sum;
+        flag = false;
+    }
+</script>
+
+</html>

@@ -29,17 +29,12 @@
 
 <body>
     <div id="main">
-
     </div>
-    <h1>Your Total Prize is</h1>
-    <h1 id="total">0</h1>
-    <a href="payment.html"><button>Buy Now</button></a>
 </body>
 <script>
     const main = document.getElementById("main");
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const total = document.getElementById("total");
-    showData(cart);
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    showData(wishlist);
 
 
     function showData(data) {
@@ -66,47 +61,27 @@
             quantity.innerText = el.quantity;
 
             remove.addEventListener("click", () => {
-                cart.splice(i, 1);
-                localStorage.setItem("cart", JSON.stringify(cart));
-                showData(cart);
-                sum();
+                wishlist.splice(i, 1);
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                showData(wishlist);
             })
 
             increment.addEventListener("click", () => {
                 el.quantity++;
-                localStorage.setItem("cart", JSON.stringify(cart));
-                showData(cart);
-                sum();
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                showData(wishlist);
             })
 
             decrement.addEventListener("click", () => {
                 if (el.quantity > 1) {
                     el.quantity--;
                 }
-                localStorage.setItem("cart", JSON.stringify(cart));
-                showData(cart);
-                sum();
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                showData(wishlist);
             })
             card.append(image, category, description, price, remove, decrement, quantity, increment);
             main.append(card);
         })
-    }
-
-    function sum() {
-        let sum = 0;
-        for (let i = 0; i < cart.length; ++i) {
-            sum += cart[i].quantity * cart[i].price;
-        }
-        total.innerText = sum;
-    }
-    let flag = true;
-    if(flag) {
-        let sum = 0;
-        for (let i = 0; i < cart.length; ++i) {
-            sum += cart[i].quantity * cart[i].price;
-        }
-        total.innerText = sum;
-        flag = false;
     }
 </script>
 

@@ -7,6 +7,125 @@
     <title>Ruby's Product</title>
 </head>
 <style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        background-color: white;
+    }
+    
+
+    .hover_navbar_items {
+            display: none;
+            background-color: blueviolet;
+            min-height: 250px;
+            width: 90%;
+            margin-left: 75px;
+        }
+
+        .product1 {
+            background-color: rgb(255, 255, 255);
+            width: 25%;
+        }
+
+        .product1>.shop_type:nth-child(1) {
+            margin-left: 30px;
+            padding-top: 50px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            text-underline-offset: 4px;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .product_list>ul {
+            margin-top: 6px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+
+        .product_list>ul>a {
+            text-decoration: none;
+        }
+
+        .product_list>ul>a>li {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            color: rgb(152, 151, 151);
+            font-weight: 100;
+            text-decoration: unset;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .product_list>ul>a>li:hover {
+            color: rgb(77, 128, 231);
+        }
+
+        .product_list-img>ul>a>img {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+    #navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    #top {
+        height: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        background-color: purple;
+        color: white;
+    }
+
+    #mid {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(234, 225, 243);
+
+    }
+
+   #mid a {
+       text-decoration: none;
+   }
+   #menu6 {
+       font-size: 30px;
+   }
+   #menu7 {
+    font-size: 30px;
+   }
+
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+    #bottom {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(235, 233, 233);
+    }
+
+    #bottom a{
+        text-decoration: none;
+        color: rgb(90, 86, 86);
+    }
     #main {
         display: grid;
         grid-auto-rows: 650px;
@@ -24,13 +143,240 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+
+    button{
+        background-color: rgb(238, 105, 238);
+        height: 30px;
+        width: 120px;
+        border-radius: 10px;
+        color: white;
+    }
+
 </style>
 <body>
-    <div id="main">
+    <div id="navbar">
+        <div id="top">Ruby's - A Tanishq Patnership</div>
+        <div id="mid">
+            <a href="index.html"><img class="logo" src="Gold Luxury Business Logo.png" alt=""></a>
+            <div id="menu1"><a href="product.html">FREE TRY AT HOME</a> </div>
+            <div id="menu2"><a href="product.html">FIND STORE</a></div>
+            <div id="menu3"><a href="https://www.caratlane.com/plan-of-purchase">PLAN OF PURCHASE</a></div>
+            <div id="menu4"><a href="https://www.caratlane.com/caratlane-digi-gold">BUY DIGITAL GOLD</a></div>
+            <div id="menu5"><input id="inp" type="text"> </div>
+            <div id="menu6"><a href="login.html">Login</a></div>
+            <div id="menu6"><a href="cart.html">❤️</a></div>
+            <div id="menu7"><a href="wishlist.html">👜</a></div>
+            
+        </div>
+        <div id="bottom">
+            <div><a href="product.html">NEW ARRIVALS</a></div>
+            <div id="ring"><a href="">RINGS</a></div>
+            <div id="earring"><a href="">EARRINGS</a></div>
+            <div id="bracelets"><a href="">BRACELETS & BANGALES</a></div>
+            <div id="solitaries"><a href="">SOLITARIES</a></div>
+            <div><a href="product.html">MANGALSUTRA</a></div>
+            <div><a href="product.html">OTEHR JEWELLERY</a></div>
+            <div><a href="product.html">GIFTING</a></div>
+            <div><a href="product.html">BEST SELLERS</a></div>
+        </div>
+    </div>
 
+    <div id="hover_navbar_items" class="hover_navbar_items">
+        <div class="product1">
+            <a class="shop_type" href="">SHOP BY STYLE</a>
+            <div class="product_list">
+                <ul>
+                    <a class="itmes" href="product.html">
+                        <li>ENGAGEMENT</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>COUPLE RINGS</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>CASUAL</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>ADJUSTABLE RINGS</li>
+                    </a>
+                    <a class="itmes" href="#product.html">
+                        <li>SILVER STATEMENT RINGS</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="product1">
+            <a class="shop_type" href=""></a>
+            <div class="product_list">
+                <ul>
+                    <a class="itmes" href="product.html">
+                        <li>PLATINUM RINGS</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>COCKTAIL</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>BANDS</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>PROMISE RINGS</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>SILVER RINGS</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="product1">
+            <a class="shop_type" href="">SHOP BY METAL & STONE</a>
+            <div class="product_list">
+                <ul>
+                    <a class="itmes" href="product.html">
+                        <li>GEMSTONE</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>SOLITAIRE</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>DIAMOND</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>GOLD</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>YELLOW GOLD</li>
+                    </a>
+                    <a class="itmes" href="/product.html">
+                        <li>WHITE GOLD</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>ROSE GOLD</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>SILVER BY SHAYA</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="product1">
+            <a class="shop_type" href="">SHOP BY</a>
+            <div class="product_list">
+                <ul>
+                    <a class="itmes" href="product.html">
+                        <li>FOR MEN</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>FOR KIDS</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>UNDER ₹ 10K</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>₹ 10K to ₹ 15K</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>₹ 15K to ₹ 20K</li>
+                    </a>
+                    <a class="itmes" href="/product.html">
+                        <li>ABOVE ₹ 20K</li>
+                    </a>
+                    <a class="itmes" href="product.html">
+                        <li>FOR WOMEN</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="product1">
+            <a class="shop_type" href=""></a>
+            <div class="product_list-img">
+                <ul>
+                    <a class="itmes" href="product.html"><img
+                            src="https://banner.caratlane.com/live-images/aa87ac634d654d37ac0e993ae50f36fd.jpg"
+                            alt="" style="width: 90%;"></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <select id="filter">
+        <option value="">Select Type</option>
+        <option value="Earring">Earring</option>
+        <option value="Ring">Ring</option>
+        <option value="Bracelets & Bangles">Bracelets & Bangles</option>
+        <option value="Necklace">Necklace</option>
+        <option value="Pendants">Pendants</option>
+    </select>
+    <div id="main">
     </div>
 </body>
 <script>
+
+const Ring = document.getElementById('ring');
+    const Earring = document.getElementById('earring');
+    const Bracelet = document.getElementById("bracelets");
+    const Solitaries = document.getElementById("solitaries");
+
+    const hover_navbar_items = document.getElementById('hover_navbar_items');
+
+
+    // for Ring
+    Ring.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex';
+    })
+    hover_navbar_items.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex'
+    })
+    hover_navbar_items.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+    Ring.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+
+    // for Earring
+    Earring.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex';
+    })
+    hover_navbar_items.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex'
+
+    })
+    hover_navbar_items.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+    Earring.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+
+
+    // for Bracelets
+    Bracelet.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex';
+    })
+    hover_navbar_items.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex'
+
+    })
+    hover_navbar_items.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+    Bracelet.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+
+    // for Solitaires
+    Solitaries.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex';
+    })
+    hover_navbar_items.addEventListener('mouseover', () => {
+        hover_navbar_items.style.display = 'flex'
+
+    })
+    hover_navbar_items.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+    Solitaries.addEventListener('mouseout', () => {
+        hover_navbar_items.style.display = 'none';
+    })
+
     const product = [
     {
         id: 1,
@@ -205,6 +551,44 @@
 const main = document.getElementById("main");
 showData(product);
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+const filter = document.querySelector("#filter");
+const search = document.getElementById("inp");
+
+let LSData = localStorage.getItem("cart");
+
+search.addEventListener("input", function () {
+        let filtered = product.filter(function (element) {
+            if (element.category.toUpperCase().includes(search.value.toUpperCase()) === true) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        showData(filtered);
+    })
+
+    if (LSData === null) {
+        LSData = [];
+    } else {
+        LSData = JSON.parse(LSData);
+    }
+
+
+    filter.addEventListener("change", function () {
+        if (filter.value === "") {
+            showData(product);
+        } else {
+            let filtered = product.filter(function (element) {
+                if (element.category === filter.value) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            showData(filtered);
+        }
+    })
 
 
 function showData(data) {
@@ -217,6 +601,7 @@ function showData(data) {
         const description = document.createElement("p");
         const price = document.createElement("h4");
         const add = document.createElement("button");
+        const addW = document.createElement("button")
 
         add.addEventListener("click", () => {
             if (checkAvailability(el)) {
@@ -227,6 +612,16 @@ function showData(data) {
                 alert("Product Added");
             }
         })
+        
+        addW.addEventListener("click", () => {
+            if (checkAvailability(el)) {
+                alert("Product is Already Selected");
+            } else {
+                cart.push({ ...el, quantity: 1 });
+                localStorage.setItem("wishlist", JSON.stringify(cart));
+                alert("Product Added");
+            }
+        })
 
 
         image.setAttribute("src", el.image);
@@ -234,8 +629,9 @@ function showData(data) {
         category.innerText = el.category;
         price.innerText = el.price;
         add.innerText = "Add to cart";
+        addW.innerText = "Add to wishlist"
 
-        card.append(image, category, description, price, add);
+        card.append(image, category, description, price, add,addW);
         main.append(card);
     })
 

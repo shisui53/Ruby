@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruby's Product</title>
+    <title>Ruby's</title>
 </head>
 <style>
-    body {
+     body {
         margin: 0%;
         padding: 0%;
         background-color: white;
@@ -126,33 +126,21 @@
         text-decoration: none;
         color: rgb(90, 86, 86);
     }
-    #main {
-        display: grid;
-        grid-auto-rows: 650px;
-        grid-template-columns: repeat(3,1fr);
-        gap: 20px;
-        text-align: center;
+    h1 {
+        color: purple;
     }
-
-    #main div {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border-radius: 20px;
+    h3 {
+        color: blueviolet;
     }
-    #main img {
-        width: 100%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    button{
-        background-color: rgb(238, 105, 238);
+    button {
         height: 30px;
-        width: 120px;
-        border-radius: 10px;
+        width: 100px;
+        border-color: white;
         color: white;
-    }
+        background-color: rgb(181, 124, 235);
+        border-radius: 5px;
 
-    @media only screen and (max-width: 900px) and (min-width: 501px) {
+        @media only screen and (max-width: 900px) and (min-width: 501px) {
         #menu1{
                 display: none;
             }
@@ -176,13 +164,7 @@
         #bottom {
                 display: none;
             }
-            #main {
-        display: grid;
-        grid-auto-rows: 600px;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-        text-align: center;
-    }
+           
         }
 
 
@@ -203,16 +185,9 @@
             #bottom {
                 display: none;
             }
-            #main {
-        display: grid;
-        grid-auto-rows: 450px;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-        text-align: center;
-    }
+            
         }
-    
-
+    }
 </style>
 <body>
     <div id="navbar">
@@ -225,8 +200,8 @@
             <div id="menu4"><a href="https://www.caratlane.com/caratlane-digi-gold">BUY DIGITAL GOLD</a></div>
             <div id="menu5"><input id="inp" type="text"> </div>
             <div id="menu6"><a href="login.html">Login</a></div>
-            <div id="menu6"><a href="cart.html">❤️</a></div>
-            <div id="menu7"><a href="wishlist.html">👜</a></div>
+            <div id="menu6"><a href="wishlist.html">❤️</a></div>
+            <div id="menu7"><a href="cart.html">👜</a></div>
             
         </div>
         <div id="bottom">
@@ -357,20 +332,14 @@
             </div>
         </div>
     </div>
-    <select id="filter">
-        <option value="">Select Type</option>
-        <option value="Earring">Earring</option>
-        <option value="Ring">Ring</option>
-        <option value="Bracelets & Bangles">Bracelets & Bangles</option>
-        <option value="Necklace">Necklace</option>
-        <option value="Pendants">Pendants</option>
-    </select>
-    <div id="main">
-    </div>
+    <center><h1>Thanks for signing</h1>
+    <h3>Continue your shopping</h3>
+    <a href="index.html"><button>Home</button></a>
+</center>
 </body>
 <script>
-
-const Ring = document.getElementById('ring');
+   
+    const Ring = document.getElementById('ring');
     const Earring = document.getElementById('earring');
     const Bracelet = document.getElementById("bracelets");
     const Solitaries = document.getElementById("solitaries");
@@ -438,272 +407,6 @@ const Ring = document.getElementById('ring');
         hover_navbar_items.style.display = 'none';
     })
 
-    const product = [
-    {
-        id: 1,
-        category: "Earring",
-        description: "Shining Hearts Diamond Stud Earrings",
-        price: 8785,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/E/JE07003-1YP900_1_lar.jpg",
-    },
-    {
-        id: 2,
-        category: "Earring",
-        description: "Shining Hearts Diamond Stud Earringsbeige",
-        price: 9607,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/E/JE06189-1RP900_1_lar.jpg",
-    },
-    {
-        id: 3,
-        category: "Earring",
-        description: "Amira Leaf Diamond Drop Earrings",
-        price: 8640,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/E/JE04937-1RP900_1_lar.jpg",
-    },
-    {
-        id: 4,
-        category: "Earring",
-        description: "Trillium Diamond Stud Earring",
-        price: 9732,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/E/JE03938-YGP600_1_lar.jpg",
-    },
-    {
-        id: 5,
-        category: "Earring",
-        description: "Twin Quad Diamond Stud Earring",
-        price: 9456,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/E/JE06321-1RP900_1_lar.jpg",
-    },
-    {
-        id: 6,
-        category: "Ring",
-        description: "Infinity Fore Life Diamond Ring",
-        price: 9772,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/R/JR06350-1RP600_1_lar.jpg",
-    },
-    {
-        id: 7,
-        category: "Ring",
-        description: "Love Cursive Gold Ring",
-        price: 9897,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/R/UR00681-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 8,
-        category: "Ring",
-        description: "Golden Snitch Ring",
-        price: 8393,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/R/UR01265-1Y00P0_1_lar.jpg",
-    },
-    {
-        id: 9,
-        category: "Ring",
-        description: "Wavy Stackable Gold Ring",
-        price: 8227,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/R/UR00659-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 10,
-        category: "Ring",
-        description: "Posy Cluster Diamond Ring",
-        price: 9877,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/R/JR05986-1RP600_1_lar.jpg",
-    },
-    {
-        id: 11,
-        category: "Bracelets & Bangles",
-        description: "Chopper Personalised Kids' Gold Bracelet",
-        price: 7122,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/T/UT00702-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 12,
-        category: "Bracelets & Bangles",
-        description: "Pretty Classic Diamond Bracelet",
-        price: 12037,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/T/JT01374-1YP900_1_lar.jpg",
-    },
-    {
-        id: 13,
-        category: "Bracelets & Bangles",
-        description: "Butterflies Baby Nazaria Gold Bracelet",
-        price: 8338,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/T/UT00842-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 14,
-        category: "Bracelets & Bangles",
-        description: "Peppa Fairy Kids' Gold Bracelet",
-        price: 9484,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/T/UT00997-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 15,
-        category: "Bracelets & Bangles",
-        description: "Celestial Adjustable Gold Bracelet",
-        price: 11165,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/T/UT00753-1C0000_1_lar.jpg",
-    },
-    {
-        id: 16,
-        category: "Necklace",
-        description: "Graduating Illusion Solitaire Necklace",
-        price: 400815,
-        image: "https://cdn.caratlane.com/media/catalog/product/S/L/SL00021-WGP900_1_lar.jpg",
-    },
-    {
-        id: 17,
-        category: "Necklace",
-        description: "Single Line Graduating Solitaire Necklace",
-        price: 945579,
-        image: "https://cdn.caratlane.com/media/catalog/product/S/L/SL00014-WGP900_1_lar.jpg",
-    },
-    {
-        id: 18,
-        category: "Necklace",
-        description: "Graduating Quarter Solitaire Necklace",
-        price: 721560,
-        image: "https://cdn.caratlane.com/media/catalog/product/S/L/SL00020-WGP900_1_lar.jpg",
-    },
-    {
-        id: 19,
-        category: "Necklace",
-        description: "Two Line Brooch Solitaire Necklace",
-        price: 1620478,
-        image: "https://cdn.caratlane.com/media/catalog/product/S/L/SL00018-YGP900_1_lar.jpg",
-    },
-    {
-        id: 20,
-        category: "Necklace",
-        description: "V Neck Solitaire Necklace",
-        price: 1663886,
-        image: "https://cdn.caratlane.com/media/catalog/product/S/L/SL00019-YGP9XR_1_lar.jpg",
-    },
-    {
-        id: 21,
-        category: "Pendants",
-        description: "Duo Diamond Heart Pendant",
-        price: 8232,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/P/JP00371-YGP900_1_lar.jpg",
-    },
-    {
-        id: 22,
-        category: "Pendants",
-        description: "Fashionable Evil Eye Gold Pendant",
-        price: 7884,
-        image: "https://cdn.caratlane.com/media/catalog/product/U/P/UP00899-1Y0000_1_lar.jpg",
-    },
-    {
-        id: 23,
-        category: "Pendants",
-        description: "Falling Star Diamond Pendant",
-        price: 6879,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/P/JP00455-YGP900_1_lar.jpg",
-    },
-    {
-        id: 24,
-        category: "Pendants",
-        description: "Swizzle Diamond Pendant",
-        price: 7722,
-        image: "https://cdn.caratlane.com/media/catalog/product/J/P/JP00458-YGP900_1_lar.jpg",
-    }
-];
-
-const main = document.getElementById("main");
-showData(product);
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-const filter = document.querySelector("#filter");
-const search = document.getElementById("inp");
-
-let LSData = localStorage.getItem("cart");
-
-search.addEventListener("input", function () {
-        let filtered = product.filter(function (element) {
-            if (element.category.toUpperCase().includes(search.value.toUpperCase()) === true) {
-                return true;
-            } else {
-                return false;
-            }
-        })
-        showData(filtered);
-    })
-
-    if (LSData === null) {
-        LSData = [];
-    } else {
-        LSData = JSON.parse(LSData);
-    }
-
-
-    filter.addEventListener("change", function () {
-        if (filter.value === "") {
-            showData(product);
-        } else {
-            let filtered = product.filter(function (element) {
-                if (element.category === filter.value) {
-                    return true;
-                } else {
-                    return false;
-                }
-            })
-            showData(filtered);
-        }
-    })
-
-
-function showData(data) {
-    main.innerHTML = "";
-    data.forEach((el) => {
-        const card = document.createElement("div");
-
-        const image = document.createElement("img");
-        const category = document.createElement("h3");
-        const description = document.createElement("p");
-        const price = document.createElement("h4");
-        const add = document.createElement("button");
-        const addW = document.createElement("button")
-
-        add.addEventListener("click", () => {
-            if (checkAvailability(el)) {
-                alert("Product is Already Selected");
-            } else {
-                cart.push({ ...el, quantity: 1 });
-                localStorage.setItem("cart", JSON.stringify(cart));
-                alert("Product Added");
-            }
-        })
-        
-        addW.addEventListener("click", () => {
-            if (checkAvailability(el)) {
-                alert("Product is Already Selected");
-            } else {
-                cart.push({ ...el, quantity: 1 });
-                localStorage.setItem("wishlist", JSON.stringify(cart));
-                alert("Product Added");
-            }
-        })
-
-
-        image.setAttribute("src", el.image);
-        description.innerText = el.description;
-        category.innerText = el.category;
-        price.innerText = el.price;
-        add.innerText = "Add to cart";
-        addW.innerText = "Add to wishlist"
-
-        card.append(image, category, description, price, add,addW);
-        main.append(card);
-    })
-
-    function checkAvailability(element) {
-        for (let i = 0; i < cart.length; ++i) {
-            if (element.id === cart[i].id) {
-                return true;
-            }
-            return false;
-        }
-    }
-}
+    
 </script>
 </html>

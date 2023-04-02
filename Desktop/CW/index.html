@@ -336,8 +336,111 @@
         border-radius: 10px;
         height: 30px;
         background-color: rgb(237, 222, 252);
-
     }
+
+    @media only screen and (max-width: 900px) and (min-width: 501px) {
+        #menu1{
+                display: none;
+            }
+            #menu2{
+                display: none;
+            }
+            #menu3{
+                display: none;
+            }
+            #menu4{
+                display: none;
+            }
+
+            #bottom {
+                display: none;
+            }
+            #body2 {
+                 display: none;
+            }
+             
+        #bottom {
+                display: none;
+            }
+
+            #body3 {
+                    width: 100%;
+                 display: grid;
+                grid-auto-rows: 130px;
+                grid-template-columns: repeat(2,1fr);
+             }
+             #body4 {
+        width: 100%;
+        display: grid;
+        grid-auto-rows: 500px;
+        grid-template-columns: repeat(2,1fr);
+             }
+             #body5 {
+        display: grid;
+        grid-auto-rows: 250px;
+        grid-template-columns: repeat(2,1fr);
+            }
+
+            #body7-1 {
+                 padding: 30px;
+             }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #menu1{
+                display: none;
+            }
+            #menu2{
+                display: none;
+            }
+            #menu3{
+                display: none;
+            }
+            #menu4{
+                display: none;
+            }
+
+            #bottom {
+                display: none;
+            }
+
+            #body2 {
+                 width: 100%;
+                 display: grid;
+                 grid-auto-rows: 200px;
+                 grid-template-columns: repeat(1,1fr);
+            }
+            
+            #body3 {
+                    width: 100%;
+                 display: grid;
+                grid-auto-rows: 130px;
+                grid-template-columns: repeat(1,1fr);
+             }
+
+             #body4 {
+        width: 100%;
+        display: grid;
+        grid-auto-rows: 500px;
+        grid-template-columns: repeat(1,1fr);
+             }
+
+             #footer{
+                 display: none;
+             }
+
+             #body7-1 {
+                 display: none;
+             }
+
+             #body5 {
+        display: grid;
+        grid-auto-rows: 250px;
+        grid-template-columns: repeat(1,1fr);
+    }
+        
+        
+        }
 
 </style>
 <body>
@@ -352,8 +455,8 @@
             <div id="menu4"><a href="https://www.caratlane.com/caratlane-digi-gold">BUY DIGITAL GOLD</a></div>
             <div id="menu5"><input id="inp" type="text"> </div>
             <div id="menu6"><a href="login.html">Login</a></div>
-            <div id="menu6"><a href="cart.html">❤️</a></div>
-            <div id="menu7"><a href="wishlist.html">👜</a></div>
+            <div id="menu6"><a href="wishlist.html">❤️</a></div>
+            <div id="menu7"><a href="cart.html">👜</a></div>
             
         </div>
         <div id="bottom">
@@ -525,7 +628,6 @@
             </div>
             <div>
                 <h1>Come visit us at any of <br>our stores!</h1>
-                <input type="text">
             </div>
         </div>
         
@@ -545,7 +647,7 @@
             <h1 class="heading1">The trust of Tanishq</h1>
             <h1 class="heading2">The spirit of CARATLANE</h1>
             <p>The highest quality of craftmanship and innovation, <br> that brings you modern, everyday designs</p>
-            <button>Konw more</button>
+            <a href="index.html"><button>Konw more</button></a>
         </div><br>
         <div id="footer">
             <div id="footertop">

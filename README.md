@@ -2,8 +2,6 @@
 
 # CaratLane Replica
 
-![Project Logo](link/to/your/logo.png)
-
 ## Table of Contents
 
 - [Introduction](#introduction)
